@@ -332,7 +332,7 @@ public class AbstractSlingClient implements HttpClient, Closeable {
 
             return response;
         } catch (IOException e) {
-            throw new ClientException("Could not execute http request", e);
+            throw new ClientException("Could not execute http request : original message : " + e.getMessage(), e);
         }
     }
 
